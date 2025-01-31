@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Alphanova : Get Stuff Done</title>
+
+  <link rel="shortcut icon" href="assets/images/fav.jpg" type="image/x-icon">
+  <link rel="icon" href="assets/images/fav.jpg" type="image/x-icon">
+  <!--- End favicon-->
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <!-- End google font  -->
+   <!-- Include Toastr CSS for styling -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+
+<!-- Include jQuery, required by Toastr -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Include Toastr JavaScript for toast functionality -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/custom-font.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/aos.css">
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <link rel="stylesheet" href="assets/css/splitting.css">
+  <link rel="stylesheet" href="assets/css/icomoon.css">
+
+  <!-- Code Editor  -->
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KQY5692DSS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KQY5692DSS');
+</script>
+</head>
+
+<body class="light">
+
+  <div class="sofax-preloader-wrap">
+    <div class="sofax-preloader">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <!-- progress bar -->
+
+  <div class="progress-bar-container">
+    <div class="progress-bar"></div>
+  </div>
+
+  <!-- progress circle -->
+  <div class="paginacontainer">
+    <div class="progress-wrap">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+      <div class="top-arrow">
+        <img src="assets/images/arrowtop.png" alt="">
+      </div>
+    </div>
+  </div>
+  <!-- End All Js -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KQY5692DSS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KQY5692DSS');
+</script>
+
+  <script>
+    // Check for toast message in sessionStorage and display it
+    document.addEventListener("DOMContentLoaded", function() {
+        const toastMessage = sessionStorage.getItem('toast_message');
+        
+        if (toastMessage) {
+            if (toastMessage === 'success') {
+                toastr.success('Message sent successfully!', 'Success');
+            } else if (toastMessage === 'error') {
+                toastr.error('Message delivery failed!', 'Error');
+            }
+            
+            // Clear the sessionStorage item after displaying the toast
+            sessionStorage.removeItem('toast_message');
+        }
+    });
+    </script>
+
+  <header class="site-header sofax-header-section site-header--menu-center" id="sticky-menu">
+    <div class="container">
+      <nav class="navbar site-navbar">
+        <!-- Brand Logo-->
+        <div class="brand-logo">
+          <a href="index.html">
+            <img src="assets/images/logo/tan.png" alt="" class="light-version-logo" style="height: 80px;">
+          </a>
+        </div>
+
+        <div class="menu-block-wrapper">
+          <div class="menu-overlay"></div>
+          <nav class="menu-block" id="append-menu-header">
+            <div class="mobile-menu-head">
+              <div class="go-back">
+                <i class="fa fa-angle-left"></i>
+              </div>
+              <div class="current-menu-title"></div>
+              <div class="mobile-menu-close">&times;</div>
+            </div>
+            <ul class="site-menu-main">
+              <li class="nav-item">
+                <a href="#home" class="nav-link-item">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#about-us" class="nav-link-item">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a href="#our-services" class="nav-link-item">Services</a>
+              </li>
+              <li class="nav-item">
+                <a href="#testimonials" class="nav-link-item">What Clients Say</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-btn header-btn-l1 ms-auto d-none d-xs-inline-flex">
+          <a class="sofax-default-btn pill sofax-header-btn" data-text="Contact Us" href="#contact-us">
+            <span class="button-wraper">Contact Us</span>
+          </a>
+        </div>
+        <!-- mobile menu trigger -->
+        <div class="mobile-menu-trigger ">
+          <span></span>
+        </div>
+        <!--/.Mobile Menu Hamburger Ends-->
+      </nav>
+    </div>
+  </header>
+  <!--End landex-header-section -->
+
+  <div class="sofax-hero-section overflow-hidden" id="home">
+    <div class="container">
+      <div class="sofax-hero-content center">
+        <h1 class="slider-custom-anim-left" data-ani="slider-custom-anim-left" data-ani-delay="0.3s">Let's create the next big thing in this digital revolution!</h1>
+        <!-- <p>The best platform for you will depend on factors such as your business size, budget, integration needs and specific sales processes. Offering visual pipeline management sales reporting & email interation.</p> -->
+      </div>
+      <!-- <div class="sofax-subscription-field blog-details-subscribe-btn">
+        <input type="email" placeholder="Enter your email ">
+        <button id="sofax-subscription-btn" type="submit">Start a 14 days free trail</button>
+      </div> -->
+      <!-- <div class="sofax-rating-icon">
+        <ul>
+          <li>
+            <img src="assets/images/v1/rattingful.svg" alt="">
+          </li>
+          <li>
+            <img src="assets/images/v1/rattingful.svg" alt="">
+          </li>
+          <li>
+            <img src="assets/images/v1/rattingful.svg" alt="">
+          </li>
+          <li>
+            <img src="assets/images/v1/rattingful.svg" alt="">
+          </li>
+          <li>
+            <img src="assets/images/v1/rattinghalf.svg" alt="">
+          </li>
+          <li>
+            4.8/5 rating software trusted by users
+          </li>
+        </ul>
+      </div> -->
+      <div class="sofax-hero-thumb1 wow fadeInUpX">
+        <img class="slide-img" src="assets/images/v1/alphanova.jpg" alt="">
+        <div class="sofax-hero-shape">
+          <img src="assets/images/v1/shape1.png" alt="">
+        </div>
+        <div class="sofax-hero-shape2">
+          <img src="assets/images/v1/shape2.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End sofax hero section -->
+  <section class="sofax-slider-section" href="#home" >
+    <div class="container">
+      <div class="sofax-title-section">
+        <h4>Trusted by a growing number of innovative companies worldwide.</h4>
+      </div>
+      <div class="sofax-brand-slider">
+        <div class="sofax-logo-icon-item" style="width: 100px;">
+          <img src="assets/images/v1/cambirian.png" alt="" style="height: 80px; object-fit: contain;">
+        </div>
+        <div class="sofax-logo-icon-item" style="width: 100px;">
+          <img src="assets/images/v1/universitatsklinikum-hamburg-eppendorf1156.jpg" alt="" style="height: 80px; object-fit: contain;">
+        </div>
+        <div class="sofax-logo-icon-item" style="width: 100px;">
+          <img src="assets/images/v1/Woblu-logo-2.png" alt="" style="height: 80px; object-fit: contain;">
+        </div>
+        <div class="sofax-logo-icon-item" style="width: 100px;">
+          <img src="assets/images/v1/VANGUARDIAN-LOGO.jpg" alt="" style="height: 80px; object-fit: contain;">
+        </div>
+        <div class="sofax-logo-icon-item" style="width: 100px;">
+          <img src="assets/images/v1/logo_gross-removebg.png" alt="" style="height: 80px; object-fit: contain;">
+        </div>
+        <div class="sofax-logo-icon-item" style="width: 100px;">
+          <img src="assets/images/v1/Logo-full.png" alt="" style="height: 80px; object-fit: contain;">
+        </div>
+        <div class="sofax-logo-icon-item" style="width: 100px;">
+          <img src="assets/images/v1/lanka-property-web.png" alt="" style="height: 80px; object-fit: contain;">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--  end brand logo section -->
+  <div class="sofax-section-padding2" id="about-us">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="sofax-content-img box-shadow mb-130 wow fadeInLeft ">
+            <img class="rounded-4" src="assets/images/v1/alpha2.jpg" alt="">
+            <!-- <div class="sofax-card-shape">
+              <img src="assets/images/v1/card.png" alt="">
+            </div> -->
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="sofax-default-content tac ml-50 mb-130 animation-title animation-style3">
+            <div class="tg-heading-subheading animation-style3">
+              <h2>Innovative Software Solutions for a Competitive Edge</h2>
+            </div>
+            <p>The Alpha Nova (TAN), we craft one of the finest custom software tailored to your needs. We partner with startups and companies of all sizes to develop innovative and reliable solutions, including web design, custom applications, ERPs, and CRMs, that drive growth and success. Our commitment to advancing technology ensures your business remains competitive, with user-friendly and cost-effective software backed by a team of creative and dedicated engineers. </p>
+            <!-- <div class="extra-mt">
+              <div class="sofax-iconbox-wrap2">
+                <div class="sofax-iconbox-icon2">
+                  <img src="assets/images/v1/check-circle.png" alt="">
+                </div>
+                <div class="sofax-iconbox-data2">
+                  <h4>Streamline processes</h4>
+                  <p>Automate repetitive tasks such as lead nurturing, follow- ups and order to the processing with using salesphere.</p>
+                </div>
+              </div>
+              <div class="sofax-iconbox-wrap2">
+                <div class="sofax-iconbox-icon2">
+                  <img src="assets/images/v1/check-circle.png" alt="">
+                </div>
+                <div class="sofax-iconbox-data2">
+                  <h4>Understand your audience</h4>
+                  <p>Utilize salesphere to gather data and insights about your target audience. Their needs preferences & pain points.</p>
+                </div>
+              </div>
+              <div class="sofax-iconbox-wrap2">
+                <div class="sofax-iconbox-icon2">
+                  <img src="assets/images/v1/check-circle.png" alt="">
+                </div>
+                <div class="sofax-iconbox-data2">
+                  <h4>Utilize customer data</h4>
+                  <p>Use this data to understand your customers preferences behaviors and pain the points,tailor your sales pitches.</p>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col-lg-5 order-lg-2">
+          <div class="sofax-content-img2 position-ralatiove ml-31 wow fadeInRight">
+            <img src="assets/images/v1/contentimg2.png" alt="">
+            <div class="sofax-content-shape-v1">
+              <img src="assets/images/v1/shape3.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="sofax-default-content mr-80 tac fs-19">
+            <div class="tg-heading-subheading animation-style3">
+              <h2>Use sales insights to drive your strategy</h2>
+            </div>
+            <p>These are just a few examp & the best choice for you will depend on the factors such as your budget your team & the specific features you need.</p>
+            <div class="extra-mt">
+              <div class="sofax-iconbox-wrap2">
+                <div class="sofax-iconbox-icon2">
+                  <img src="assets/images/v1/icon9.png" alt="">
+                </div>
+                <div class="sofax-iconbox-data2">
+                  <h4>Time saved in closing deals</h4>
+                  <p>You'll save time managing and closing deals by having a centralized hub for all your sales activities.</p>
+                </div>
+              </div>
+              <div class="sofax-iconbox-wrap2">
+                <div class="sofax-iconbox-icon2">
+                  <img src="assets/images/v1/icon4.png" alt="">
+                </div>
+                <div class="sofax-iconbox-data2">
+                  <h4>Quick access of data & communication</h4>
+                  <p>Quickly access all the information you need to close deals. Have contact details for each prospect in one place.</p>
+                </div>
+              </div>
+            </div>
+            <div class="extra-mt wow fadeInUpX">
+              <a class="sofax-default-btn pill" data-text="Get started" href="contact-us.html">
+                <span class="button-wraper">Get started</span>
+              </a>
+            </div>
+            <div class="sofax-content-shape-v1">
+              <img src="assets/images/v1/shape3.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+  <!-- end content1 section -->
+  <div class="section sofax-section-padding bg-light" id="our-services">
+    <div class="container">
+      <div class="sofax-section-title max-width-770 ">
+        <div class="row">
+          <div class="col-xl-8 col-lg-8">
+            <div class="tg-heading-subheading animation-style3">
+              <h2>Explore Our Range of Expert Services</h2>
+            </div>
+          </div>
+          <!-- <div class="col-xl-4 col-lg-4 d-flex justify-content-end align-items-center">
+            <div class="sofax-title-btn wow fadeInUpX">
+              <a class="sofax-default-btn pill" data-text="View all services" href="service.html">
+                <span class="button-wraper">View all services</span>
+              </a>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-4 col-md-6" id="id4-sofax-iconbox-data">
+          <div class="sofax-iconbox-wrap wow fadeInUpX" style="min-height: 600px;" data-wow-delay="0.1s">
+            <div class="sofax-iconbox-icon">
+              <img class="w-25" src="assets/images/v1/undraw_mobile_development_re_wwsn.svg" alt="">
+            </div>
+            <div class="sofax-iconbox-data">
+              <h4>Mobile App Development</h4>
+              <p>Our Cross-Platform Mobile Application development service is possible due to the use of Ionic and React Native. This enables us to create your Mobile Application to be compatible over any major platform; iOS (iPhone & iPad), Android and Windows.</p>
+              <!-- <a class="sofax-icon-btn" href="single-service.html">More details <img src="assets/images/v1/arrow-right.png" alt=""></a> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6" id="id2-sofax-iconbox-data">
+          <div class="sofax-iconbox-wrap wow fadeInUpX" style="min-height: 600px;" data-wow-delay="0.2s">
+            <div class="sofax-iconbox-icon">
+              <img class="w-25" src="assets/images/v1/undraw_web_development_0l6v.svg" alt="">
+            </div>
+            <div class="sofax-iconbox-data">
+              <h4>Web Development</h4>
+              <p>Our Web Design & Development team follows a human-centric method to problem solving and innovation. In order to design web products & services, we make sure the specific needs of our client are at the top of our priorities.</p>
+              <!-- <a class="sofax-icon-btn" href="single-service.html">More details <img src="assets/images/v1/arrow-right.png" alt=""></a> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6"  id="id3-sofax-iconbox-data">
+          <div class="sofax-iconbox-wrap wow fadeInUpX" style="min-height: 600px;" data-wow-delay="0.3s">
+            <div class="sofax-iconbox-icon">
+              <img class="w-25" src="assets/images/v1/undraw_analytics_re_dkf8.svg" alt="">
+            </div>
+            <div class="sofax-iconbox-data">
+              <h4>Analytic Solutions</h4>
+              <p>Our Analytical Solutions service empowers your business with data-driven insights and advanced analytical tools. Whether you're aiming to improve customer experiences, streamline processes, or forecast trends, our tailored analytical strategies ensure you stay ahead in an ever-changing market landscape.
+              </p>
+              <!--<p>Our Analytic Software Solutions aim to make available specific information at your fingertips as and when needed so that our clients with this business intelligence, can always be on top of their game with precise decision making.</p>-->
+              <!-- <a class="sofax-icon-btn" href="single-service.html">More details <img src="assets/images/v1/arrow-right.png" alt=""></a> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6" id="id1-sofax-iconbox-data">
+          <div class="sofax-iconbox-wrap wow fadeInUpX" style="min-height: 600px;" data-wow-delay="0.3s">
+            <div class="sofax-iconbox-icon">
+              <img class="w-25" src="assets/images/v1/undraw_programming_re_kg9v.svg" alt="">
+            </div>
+            <div class="sofax-iconbox-data">
+              <h4>Software Development</h4>
+              <p>We provide a wide range of Application Software Development services especially in Enterprise Application Development, Commercial, Manufacturing, and Travel Industry etc.</p>
+              <!-- <a class="sofax-icon-btn" href="single-service.html">More details <img src="assets/images/v1/arrow-right.png" alt=""></a> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6"  id="id5-sofax-iconbox-data">
+          <div class="sofax-iconbox-wrap wow fadeInUpX" style="min-height: 600px;" data-wow-delay="0.3s">
+            <div class="sofax-iconbox-icon">
+              <img class="w-25" src="assets/images/v1/undraw_wireframing_re_q6k6.svg" alt="">
+            </div>
+            <div class="sofax-iconbox-data">
+              <h4>Product Design</h4>
+              <p>We work with modern design technologies and ideas to build fully responsive & mobile friendly software & websites solutions to our clients. We offer a range of app & web designing and development services including Search Engine Optimization (SEO) & Social Media Marketing (SMM).</p>
+              <!-- <a class="sofax-icon-btn" href="single-service.html">More details <img src="assets/images/v1/arrow-right.png" alt=""></a> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6"  id="id6-sofax-iconbox-data">
+          <div class="sofax-iconbox-wrap wow fadeInUpX" style="min-height: 600px;" data-wow-delay="0.3s">
+            <div class="sofax-iconbox-icon">
+              <img class="w-25" src="assets/images/v1/undraw_maintenance_re_59vn.svg" alt="">
+            </div>
+            <div class="sofax-iconbox-data">
+              <h4>Database Administration</h4>
+              <p>We manage your data assets efficiently and securely. Our comprehensive solutions cover database design, implementation, maintenance, and optimization, tailored to your business needs. With expertise in both on-premises and cloud-based systems, we ensure high availability, robust security, and peak performance.</p>
+              <!--<p>We offer complete Database Administration services throughout the gamut be it performance analysis or database design. Our DBA & DBM services drive high-performance operations while reducing complexity, optimizing results, and improving your return on investment. With our DBA & DBM services our clients will be able to focus on their other core activities while we handle mission-critical applications turning them into simple, seamless processes.</p>-->
+              <!-- <a class="sofax-icon-btn" href="single-service.html">More details <img src="assets/images/v1/arrow-right.png" alt=""></a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end service section -->
+ 
+  <section class="sofax-section-padding2" id="testimonials">
+    <div class="container">
+      <div class="sofax-section-title center">
+        <div class="tg-heading-subheading animation-style3">
+          <h2>Here's What Our Clients Are Saying</h2>
+        </div>
+      </div>
+    </div>
+    <div class="sofax-testimonial-slider">
+      <div class="sofax-testimonial-content" style="min-height: 600px;">
+        <div class="sofax-testimonial-rating">
+          <ul>
+            <li>
+              <img src="assets/images/v1/rattingful.svg" alt="">
+            </li>
+            <li>
+              <img src="assets/images/v1/rattingful.svg" alt="">
+            </li>
+            <li>
+              <img src="assets/images/v1/rattingful.svg" alt="">
+            </li>
+            <li>
+              <img src="assets/images/v1/rattingful.svg" alt="">
+            </li>
+            <li>
+              <img src="assets/images/v1/rattingful.svg" alt="">
+            </li>
+          </ul>
+        </div>
+        <div class="sofax-testimonial-data">
+          <p>Most of our IT and all of our app projects are conducted with The Alpha Nova. I had the pleasure to work directly with The Alpha Nova team who were extremely dedicated to the task and handled everything brilliantly. Reference: <a href="https://clinical-neuropsychology.de/english-home/">https://clinical-neuropsychology.de/english-home/</a></p>
+        </div>
+        <div class="sofax-testimonial-author">
+          <div class="sofax-testimonial-author-thumb">
+            <img src="assets/images/v1/Steffen_Moritz.png" alt=""  style="height:40px; width: 40px; object-fit: cover;">
+
+          </div>
+          <div class="sofax-testimonial-author-data">
+            <h5>Steffen Moritz</h5>
+            <p>Prof. Dr. - Universitätsklinikum Hamburg-Eppendorf (Germany)</p>
+          </div>
+        </div>
+      </div>
+      <div class="sofax-testimonial-content" style="min-height: 600px;">
+        <div class="sofax-testimonial-rating">
+          <ul>
+            <li>
+              <img src="assets/images/v1/rattingful.svg" alt="">
+            </li>
+            <li>
+              <img src="assets/images/v1/rattingful.svg" alt="">
+            </li>
+            <li>
+              <img src="assets/images/v1/rattingful.svg" alt="">
+            </li>
+            <li>
+              <img src="assets/images/v1/rattingful.svg" alt="">
+            </li>
+            <li>
+              <img src="assets/images/v1/rattingful.svg" alt="">
+            </li>
+          </ul>
+        </div>
+        <div class="sofax-testimonial-data">
+          <p>We have had nothing but a great experience working with The Alpha Nova team for all our app development and IT work. It was also extremely easy to communicate and get necessary feedback throughout all our projects with the team.</p>
+        </div>
+        <div class="sofax-testimonial-author">
+          <div class="sofax-testimonial-author-thumb">
+            <img src="assets/images/v1/saudi.jpg" alt=""  style="height:40px; width: 40px; object-fit: cover;">
+
+          </div>
+          <div class="sofax-testimonial-author-data">
+            <h5>Abdulelah Almutairi </h5>
+            <p>CEO - 7 Days (Saudi Arabia)</p>
+          </div>
+        </div>
+      </div>
+      <div class="sofax-testimonial-content" style="min-height: 600px;">
+        <div class="sofax-testimonial-rating">
+          <ul>
+            <li>
+              <img src="assets/images/v1/rattingful.svg" alt="">
+            </li>
+            <li>
+              <img src="assets/images/v1/rattingful.svg" alt="">
+            </li>
+            <li>
+              <img src="assets/images/v1/rattingful.svg" alt="">
+            </li>
+            <li>
+              <img src="assets/images/v1/rattingful.svg" alt="">
+            </li>
+            <li>
+              <img src="assets/images/v1/rattingful.svg" alt="">
+            </li>
+          </ul>
+        </div>
+        <div class="sofax-testimonial-data">
+          <p>I had an outstanding experience working with the Alpha Nova team on my Android and iOS app development. Their attention to detail and commitment to quality were evident throughout the process. Communication was always clear and prompt, and they demonstrated remarkable flexibility in addressing my needs. I wholeheartedly recommend Alpha Nova, and I look forward to building a long-lasting partnership with them.</p>
+        </div>
+        <div class="sofax-testimonial-author">
+          <div class="sofax-testimonial-author-thumb">
+            <img src="assets/images/v1/Markus-v5.jpg" alt=""  style="height:40px; width: 40px; object-fit: cover;">
+
+          </div>
+          <div class="sofax-testimonial-author-data">
+            <h5>Dr. Markus Lehmann</h5>
+            <p>CEO at comAlpine</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- end testimonial section -->
+
+  <section class="section sofax-section-padding2 position-ralatiove bg-light">
+    <div class="container">
+      <div class="row">
+        <!-- <div class="col-lg-6">
+          <div class="about-thumbv5 wow fadeInLeft">
+            <img src="assets/images/v5/aboutthumb.png" alt="">
+          </div> -->
+        </div>
+        <div class="col-lg-12">
+          <div class="sofax-default-content tac text-center">
+            <h2 class="text-center">Our Journey in Numbers</h2>
+            <p class="text-center py-5">From 25+ happy clients to 5,000+ hours dedicated to excellence, our global reach spans 20+ regions—all powered by countless cups of coffee. These numbers reflect our commitment to delivering quality and innovation in every project.</p>
+            <div id="sofax-counter"></div>
+            <div class="sofax-counter-wrap-v5">
+              <div class="sofax-counter-data-v5">
+                <h2><span data-percentage="25 " class="sofax-counter"></span>+</h2>
+                <p>Happy Clients</p>
+              </div>
+              <div class="sofax-counter-data-v5">
+                <h2><span data-percentage="5000" class="sofax-counter"></span>+</h2>
+                <p>Hours Worked</p>
+              </div>
+              <div class="sofax-counter-data-v5">
+                <h2><span data-percentage="20" class="sofax-counter"></span>+</h2>
+                <p>Global Reach<p>
+              </div>
+              <div class="sofax-counter-data-v5">
+                <h2><span data-percentage="100" class="sofax-counter"></span>+</h2>
+                <p>Cups of coffee</p>
+              </div>
+            </div>
+            <!-- <div class="extra-mt tac3 wow fadeInUpX">
+              <a class="sofax-default-btn pill" data-text="Explore More" href="contact-us.html">
+                <span class="button-wraper">Explore More</span>
+              </a>
+            </div>
+            <div class="sofax-about-shapev5">
+              <img src="assets/images/v5/shape2.png" alt="">
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+  <section class="section sofax-section-padding2" id="contact-us">
+    <div class="container">
+      <div class="row">
+        <!-- <div class="col-lg-5">
+          <div class="contactus-authore-wrapper">
+            <div class="sofax-iconbox-wrap2">
+              <div class="sofax-iconbox-icon2">
+                <img src="assets/images/contact/icon1.png" alt="">
+              </div>
+              <div class="sofax-iconbox-data2">
+                <h4>Chat with us</h4>
+                <p>We're waiting to help you every Monday-Friday from 9 am to 5 pm EST easily.</p>
+              </div>
+            </div>
+            <div class="sofax-iconbox-wrap2">
+              <div class="sofax-iconbox-icon2">
+                <img src="assets/images/contact/icon2.png" alt="">
+              </div>
+              <div class="sofax-iconbox-data2">
+                <h4>Give us a call</h4>
+                <p>Give us a ring at (+1 437 424 5384).</p>
+              </div>
+            </div>
+            <div class="sofax-iconbox-wrap2">
+              <div class="sofax-iconbox-icon2">
+                <img src="assets/images/contact/icon3.png" alt="">
+              </div>
+              <div class="sofax-iconbox-data2">
+                <h4>Email Us</h4>
+                <p>Drop us an email at info@thealphanova.com and you'll receive a reply within 24 hours.</p>
+              </div>
+            </div>
+            <div class="sofax-iconbox-wrap2">
+              <div class="sofax-iconbox-icon2">
+                <img src="assets/images/contact/icon3.png" alt="">
+              </div>
+              <div class="sofax-iconbox-data2">
+                <h4>Locate Us</h4>
+                <p>at Greater Sudbury, Ontario.</p>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <div class="col-lg-12">
+          <div class="sofax-field-box ml-50">
+            <h3>Get in touch</h3>
+            <form action="send_email.php" method="POST">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="sofax-main-field">
+                    <label>Contact Name</label>
+                    <input type="text" name="name" placeholder="Name" required>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="sofax-main-field">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="sofax-main-field">
+                    <label>Contact Number</label>
+                    <input type="tel" name="phone" placeholder="Contact Number">
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="sofax-main-field">
+                    <label>Message</label>
+                    <textarea name="message" placeholder="Write Your Message" required></textarea>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="sofax-form-box">
+                    <input type="checkbox" id="css" name="save_info">
+                    <label for="css">
+                      Save my name, email, & website in this browser for the next time I comment.
+                    </label>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="tac">
+                    <button id="sofax-submit-btn" class="mt-30" type="submit">Send Message</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <!-- end faq section -->
+  <!-- <section class="sofax-section-padding2 bg-light">
+    <div class="container">
+      <div class="sofax-cta-content">
+        <div class="tg-heading-subheading animation-style3">
+          <h2>Driving business growth with a new experience</h2>
+        </div>
+        <p>Start tracking your sales pipeline, manage leads, and automate your entire sales process in one place so you can easily focus on selling.</p>
+        <div class="extra-mt wow fadeInUpX">
+          <a class="sofax-default-btn pill" data-text="Create a free account" href="sign-up.html">
+            <span class="button-wraper">Create a free account</span>
+          </a>
+          <span class="cta-bottom">Full access. No credit card needed.</span>
+        </div>
+        <div class="sofax-cta-shape">
+          <img src="assets/images/v1/shape4.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- end cta section -->
+
+
+
+
+
+
+  <footer class="sofax-footer-section">
+    <div class="container">
+      <div class="sofax-footer-top">
+        <div class="row">
+          <div class="col-xl-4 col-md-12">
+            <div class="sofax-footer-wrap mr-15">
+              <a href="index.html"><img src="assets/images/logo/tan.png" alt=""></a>
+              <p>The Alpha Nova (TAN), your partner in developing innovative and creative communication and information solutions.</p>
+              <div class="sofax-social-icon">
+                <ul>
+                  
+                  <li>
+                    <a href="https://www.facebook.com/theAlphaNova/">
+                      <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.88663 0.00357362L7.65153 0C5.14046 0 3.5177 1.65905 3.5177 4.22688V6.17575H1.27039C1.0762 6.17575 0.918945 6.33263 0.918945 6.52614V9.34984C0.918945 9.54335 1.07638 9.70005 1.27039 9.70005H3.5177V16.8251C3.5177 17.0187 3.67495 17.1754 3.86914 17.1754H6.80123C6.99543 17.1754 7.15268 17.0185 7.15268 16.8251V9.70005H9.7803C9.9745 9.70005 10.1318 9.54335 10.1318 9.34984L10.1328 6.52614C10.1328 6.43323 10.0957 6.34425 10.0299 6.27849C9.9641 6.21274 9.87444 6.17575 9.7812 6.17575H7.15268V4.52367C7.15268 3.72961 7.34257 3.3265 8.3806 3.3265L9.88627 3.32597C10.0803 3.32597 10.2375 3.16909 10.2375 2.97575V0.353788C10.2375 0.160634 10.0805 0.00393098 9.88663 0.00357362Z" fill="#0E0E0E" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/thealphanova/">
+                      <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.043 0H5.9475C3.14256 0 0.86792 2.26664 0.86792 5.06173V11.1358C0.86792 13.9309 3.14256 16.1975 5.9475 16.1975H12.043C14.8479 16.1975 17.1226 13.9309 17.1226 11.1358V5.06173C17.1226 2.26664 14.8479 0 12.043 0ZM15.5987 11.1358C15.5987 13.0896 14.0037 14.679 12.043 14.679H5.9475C3.98678 14.679 2.39179 13.0896 2.39179 11.1358V5.06173C2.39179 3.1079 3.98678 1.51852 5.9475 1.51852H12.043C14.0037 1.51852 15.5987 3.1079 15.5987 5.06173V11.1358Z" fill="#0E0E0E" />
+                        <path d="M9.00312 4.05713C6.75896 4.05713 4.93945 5.87024 4.93945 8.10651C4.93945 10.3428 6.75896 12.1559 9.00312 12.1559C11.2473 12.1559 13.0668 10.3428 13.0668 8.10651C13.0668 5.87024 11.2473 4.05713 9.00312 4.05713ZM9.00312 10.6374C7.60319 10.6374 6.46333 9.50153 6.46333 8.10651C6.46333 6.71049 7.60319 5.57565 9.00312 5.57565C10.4031 5.57565 11.5429 6.71049 11.5429 8.10651C11.5429 9.50153 10.4031 10.6374 9.00312 10.6374Z" fill="#0E0E0E" />
+                        <path d="M13.3527 4.29821C13.653 4.29821 13.8964 4.05602 13.8964 3.75726C13.8964 3.4585 13.653 3.21631 13.3527 3.21631C13.0525 3.21631 12.8091 3.4585 12.8091 3.75726C12.8091 4.05602 13.0525 4.29821 13.3527 4.29821Z" fill="#0E0E0E" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/company/the-alpha-nova/?viewAsMember=true">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.877 15.0112V15.0106H15.8807V9.49947C15.8807 6.8034 15.2983 4.72656 12.1353 4.72656C10.6147 4.72656 9.59433 5.55805 9.17775 6.34633H9.13377V4.97826H6.13477V15.0106H9.25755V10.0429C9.25755 8.73498 9.50637 7.47022 11.1318 7.47022C12.7335 7.47022 12.7573 8.96289 12.7573 10.1268V15.0112H15.877Z" fill="#0E0E0E" />
+                        <path d="M1.0498 4.99463H4.17636V15.0269H1.0498V4.99463Z" fill="#0E0E0E" />
+                        <path d="M2.62114 0C1.62147 0 0.810303 0.808321 0.810303 1.80448C0.810303 2.80063 1.62147 3.62586 2.62114 3.62586C3.62081 3.62586 4.43198 2.80063 4.43198 1.80448C4.43135 0.808321 3.62018 0 2.62114 0V0Z" fill="#0E0E0E" />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6">
+            <div class="sofax-footer-menu ml-100 sofax-footer-active">
+              <h5>Our Services</h5>
+              <ul>
+                <li><a href="#id1-sofax-iconbox-data">Software Development</a></li>
+                <li><a href="#id2-sofax-iconbox-data">Web Development</a></li>
+                <li><a href="#id3-sofax-iconbox-data">Analytic Solutions</a></li>
+                <li><a href="#id4-sofax-iconbox-data">Mobile App Development</a></li>
+                <li><a href="#id5-sofax-iconbox-data">Product Design</a></li>
+                <li><a href="#id6-sofax-iconbox-data">Database Administration</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6">
+            <div class="sofax-footer-menu ml-50">
+              <h5>Contact Info</h5>
+              <ul>
+                <!--<li><a href="">Canada | USA | Germany | Sri Lanka</a></li>-->
+                <li>Canada | USA | Germany | Sri Lanka</li>
+                <li><a href="mailto:info@thealphanova.com">info@thealphanova.com</a></li>
+                <li><a href="tel:+14374245384">Mobile No: +1 437 424 5384</a></li>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="sofax-footer-bottom center">
+        <p>© 2025. Alphanova. Get Stuff Done</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- scripts -->
+  <script src="assets/js/jquery-3.7.1.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/menu/menu.js"></script>
+  <script src="assets/js/isotope.pkgd.min.js"></script>
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/countdown.js"></script>
+  <script src="assets/js/slick.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/modernizr.min.js"></script>
+  <script src="assets/js/countdown.js"></script>
+  <script src="assets/js/skill-bar.js"></script>
+  <script src="assets/js/pricing-switcher.js"></script>
+  <script src="assets/js/top-to-bottom.js"></script>
+  <script src="assets/js/gsap.js"></script>
+  <script src="assets/js/ScrollTrigger.js"></script>
+  <script src="assets/js/SplitText.js"></script>
+  <script src="assets/js/gsap-animation.js"></script>
+
+
+  <!-- <script src="assets/js/scrollsmooth.js"></script> -->
+  <script src="assets/js/accordion.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyArZVfNvjnLNwJZlLJKuOiWHZ6vtQzzb1Y"></script>
+
+  <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
